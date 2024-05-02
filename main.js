@@ -9,7 +9,7 @@ const { ipcMain,app, BrowserWindow } = require('electron');
 
 
 const SCOPES = ['https://www.googleapis.com/auth/gmail.readonly'];
-const TOKEN_PATHS = {"aymenfkir23@gmail.com":path.join(__dirname,"tokens","token.json"),"aymenfkir@gmail.com":path.join(__dirname,"tokens","token2.json")}
+const TOKEN_PATHS = {"email1":path.join(__dirname,"tokens","token.json"),"email2":path.join(__dirname,"tokens","token2.json")}
 const CREDENTIALS_PATH = path.join(process.cwd(), 'credentials.json');
 const env = require('dotenv').config();
 var api_key = env.parsed["api_key"]
@@ -96,10 +96,10 @@ function Getreciever(emailData){
   const reciver = emailData.data.payload.headers.find(
     (header) => header.name === "To"
   )?.value
-  if (reciver.includes("aymenfkir23@gmail.com")){
-      return "aymenfkir23@gmail.com"
+  if (reciver.includes("email1")){
+      return "email1"
   }else{
-    return "aymenfkir@gmail.com"
+    return "email2"
   }
 }
 
@@ -148,8 +148,8 @@ async function ListUnreadMails(auth) {
 
 async function Get(){
   try {
-    const user1cred = await authorize(TOKEN_PATHS["aymenfkir23@gmail.com"])
-    const user2cred = await authorize(TOKEN_PATHS["aymenfkir@gmail.com"])
+    const user1cred = await authorize(TOKEN_PATHS["email1"])
+    const user2cred = await authorize(TOKEN_PATHS["email2])
     const user1Emails = await ListUnreadMails(user1cred)
     const user2Emails = await ListUnreadMails(user2cred)
     return [user1Emails,user2Emails];
