@@ -1,0 +1,100 @@
+body{
+    height: 100vh;
+    width: 900px;
+    display: flex;
+    overflow: hidden;
+    font-family: "Poppins", sans-serif;
+    font-weight: 200;
+    font-size: 10px;
+    justify-content: space-between;
+    background-color: white;
+
+    
+}
+
+.container{
+    overflow-x:hidden;
+    overflow-y: scroll;
+    scrollbar-width: none;
+}
+
+#list{
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    justify-content: start;
+    align-items: start;
+    gap: 2px;
+    width: 420px;
+    border-right: 2px solid ;
+    
+}
+
+
+.items{
+    margin-right: 5px;
+    border: none;
+    height: 100px;
+    width: 350px;
+    box-shadow: 1px 1px 7px 0px rgb(72, 122, 180);
+    display: flex;
+    gap:20px;
+    align-items: center;
+    border-radius: 20px;
+    background-color: rgb(20, 20, 110);
+    color: white;
+    margin-bottom: 10px;
+}
+
+.tag{
+    margin-top: 50px;
+    width: 70px;
+    margin-right: 10px;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.subject{
+    display: flex;
+    align-items: center;
+    width: 400px;
+    height: 50px;
+    margin-left: 10px;
+}
+
+
+
+.email{
+    width: 400px;
+    height: 540px;
+    margin-left: 3px;
+    background-color: #272727;
+    color: #EFFFFB;
+    border-radius: 10px;
+    overflow: scroll;
+    scrollbar-width: none;
+    
+
+}
+
+#inside_element{
+    display: flex;
+    word-wrap: break-word;
+    margin-top: 10px;
+    padding-left: 5px;
+    height: 520px;
+    max-width: 380px;
+    overflow: scroll;
+    scrollbar-width: none;
+}
+p{
+    max-width: 350px;
+    word-wrap: break-word;
+}
+
+
+
+/* color pallet link :https://colorhunt.co/palette/e8c872fff3cfc9d7dd637a9f */

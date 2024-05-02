@@ -1,0 +1,26 @@
+{
+  "name": "emai_manager",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "electron main.js",
+    "electron-trace": "electron --trace-warnings main.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^29.1.0"
+  },
+  "dependencies": {
+    "@google-cloud/local-auth": "^2.1.0",
+    "axios": "^1.6.7",
+    "dotenv": "^16.4.5",
+    "googleapis": "^105.0.0",
+    "langchain": "^0.1.25",
+    "mailparser": "^3.7.1",
+    "openai": "^4.28.4"
+  }
+}
